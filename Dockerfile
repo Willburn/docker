@@ -59,5 +59,3 @@ RUN mkdir srv/cardano/cardano-node/storage && \
 WORKDIR /srv/cardano/cardano-node/
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-
-CMD ['cardano-node', 'run', '--config', '/srv/cardano/cardano-node/config/nodeconf.yaml', '--database-path', '/srv/cardano/cardano-node/storage/db', '--port', '3000', '--socket-path', '/srv/cardano/cardano-node/sockets/pbft_node.socket', '--topology', '/srv/cardano/cardano-node/config/topology.json']
