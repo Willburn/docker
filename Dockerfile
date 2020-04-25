@@ -50,11 +50,10 @@ RUN useradd -c "Cardano node user" \
 
 USER cardano-node
 
-RUN mkdir srv/cardano/cardano-node/log
-RUN mkdir srv/cardano/cardano-node/storage
-RUN mkdir srv/cardano/cardano-node/configuration
-RUN mkdir srv/cardano/cardano-node/sockets
-RUN mkdir -p srv/cardano/cardano-node/etc/secrets
+RUN mkdir srv/cardano/cardano-node/storage && \
+    mkdir -p srv/cardano/cardano-node/configuration/logs && \
+    mkdir srv/cardano/cardano-node/sockets && \
+    mkdir -p srv/cardano/cardano-node/etc/secrets
 
 WORKDIR /srv/cardano/cardano-node/
 
