@@ -1,0 +1,15 @@
+(dockerfile will be From ubuntu:19.10)
+0. apt update -y
+1. apt-get install -y software-properties-common
+2. add-apt-repository ppa:hvr/ghc -y
+3. apt update -y
+4. apt-get install -y cabal-install-3.0 ghc-8.6.5
+5. apt-get -y install curl build-essential pkg-config libffi-dev libgmp-dev libssl-dev libtinfo-dev libsystemd-dev zlib1g-dev git
+6. git clone https://github.com/input-output-hk/cardano-node
+7. cd /root
+8. mkdir -p .local{bin}
+9. export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/opt/cabal/bin:/opt/ghc/bin/:/root/.local/bin
+10. cd /cardano-node
+11. cabal update
+12. cabal build cardano-node
+
