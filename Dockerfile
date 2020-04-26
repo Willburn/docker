@@ -47,12 +47,12 @@ RUN useradd -c "Cardano node user" \
             -r \
             -s /bin/nologin \
             cardano-node
-
+    
 USER cardano-node
 
 RUN mkdir srv/cardano/cardano-node/storage && \
     mkdir srv/cardano/cardano-node/config && \
-    mkdir srv/cardano/cardano-node/logs &&\
+    mkdir srv/cardano/cardano-node/logs && \
     mkdir srv/cardano/cardano-node/sockets && \
     mkdir -p srv/cardano/cardano-node/etc/secrets
 
